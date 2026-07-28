@@ -58,21 +58,21 @@ module "iam" {
 }
 
 module "alb" {
-  source          = "./modules/alb"
-  project_name    = var.project_name
-  vpc_id          = module.vpc.vpc_id
-  public_subnets  = module.vpc.public_subnet_ids
-  alb_sg          = module.security_groups.alb_sg_id
+  source         = "./modules/alb"
+  project_name   = var.project_name
+  vpc_id         = module.vpc.vpc_id
+  public_subnets = module.vpc.public_subnet_ids
+  alb_sg         = module.security_groups.alb_sg_id
 }
 
 module "ec2" {
-  source            = "./modules/ec2"
-  project_name      = var.project_name
-  ami               = var.ami
-  ec2_sg            = module.security_groups.ec2_sg_id
-  private_subnets   = module.vpc.private_app_subnet_ids
-  instance_profile  = module.iam.instance_profile
-  target_group      = module.alb.target_group_arn
+  source           = "./modules/ec2"
+  project_name     = var.project_name
+  ami              = var.ami
+  ec2_sg           = module.security_groups.ec2_sg_id
+  private_subnets  = module.vpc.private_app_subnet_ids
+  instance_profile = module.iam.instance_profile
+  target_group     = module.alb.target_group_arn
 }
 
 module "rds" {
