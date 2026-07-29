@@ -36,10 +36,6 @@ variable "key_name" {
   type = string
 }
 
-variable "ami" {
-  type = string
-}
-
 variable "availability_zones" {
   type = list(string)
 }

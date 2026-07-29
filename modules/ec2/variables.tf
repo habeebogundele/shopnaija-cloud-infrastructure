@@ -3,11 +3,6 @@ variable "project_name" {
   type        = string
 }
 
-variable "ami" {
-  description = "AMI ID for the EC2 instances"
-  type        = string
-}
-
 variable "ec2_sg" {
   description = "Security Group ID for EC2 instances"
   type        = string

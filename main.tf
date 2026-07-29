@@ -68,7 +68,6 @@ module "alb" {
 module "ec2" {
   source           = "./modules/ec2"
   project_name     = var.project_name
-  ami              = var.ami
   ec2_sg           = module.security_groups.ec2_sg_id
   private_subnets  = module.vpc.private_app_subnet_ids
   instance_profile = module.iam.instance_profile
