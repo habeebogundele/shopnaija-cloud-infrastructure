@@ -44,6 +44,6 @@ desktop.ini
 # IntelliJ/JetBrains (optional)
 .idea/
 
-terraform.tfvars
+# terraform.tfvars
 dev.tfvars
 prod.tfvars
