@@ -14,11 +14,6 @@ variable "my_ip" {
 
 }
 
-variable "environment" {
-  description = "Deployment environment"
-  type        = string
-}
-
 variable "db_username" {
   type = string
 }
