@@ -13,6 +13,8 @@ jobs:
       TF_VAR_aws_region: ${{ vars.TF_VAR_AWS_REGION }}
       TF_VAR_project_name: ${{ vars.TF_VAR_PROJECT_NAME }}
       TF_VAR_cidr_block: ${{ vars.TF_VAR_CIDR_BLOCK }}
+      TF_VAR_public_subnet_cidrs: ${{ vars.TF_VAR_PUBLIC_SUBNET_CIDRS }}
+      TF_VAR_private_subnet_cidrs: ${{ vars.TF_VAR_PRIVATE_SUBNET_CIDRS }}
       TF_VAR_availability_zones: ${{ vars.TF_VAR_AVAILABILITY_ZONES }}
       TF_VAR_my_ip: ${{ vars.TF_VAR_MY_IP }}
 
@@ -33,7 +35,7 @@ jobs:
       - run: terraform init
 
       - run: terraform fmt
-      
+
       - run: terraform fmt -check
 
       - run: terraform validate
