@@ -1,3 +1,5 @@
+/*
+
 module "vpc" {
 
   source = "./modules/vpc"
@@ -97,3 +99,5 @@ module "s3" {
   project_name = var.project_name
 
 }
+
+*/
