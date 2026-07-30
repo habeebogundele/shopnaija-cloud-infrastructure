@@ -47,3 +47,5 @@ desktop.ini
 terraform.tfvars
 dev.tfvars
 prod.tfvars
+
+shopnaija.pem
